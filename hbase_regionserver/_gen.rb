@@ -44,6 +44,8 @@ def decorate_unit(metric)
       metric["unit_name"] = "percent"
     elsif metric["alias"].include?("time") || metric["description"].include?("time")
       metric["unit_name"] = "millisecond"
+    elsif metric["attribute"].end_with?("_num_ops")
+      metric["unit_name"] = "operation"
     else
       metric["unit_name"] = ""
     end

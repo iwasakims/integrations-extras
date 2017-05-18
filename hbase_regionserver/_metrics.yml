@@ -224,10 +224,12 @@
   attribute: hedgedReads
   metric_type: gauge
   alias: hbase.regionserver.server.hedged_read
+  description: Number of started headged reads of HDFS.
 - bean: Hadoop:service=HBase,name=RegionServer,sub=Server
   attribute: hedgedReadWins
   metric_type: gauge
   alias: hbase.regionserver.server.hedged_read_wins
+  description: Number of headged reads which beated original read.
 - bean: Hadoop:service=HBase,name=RegionServer,sub=Server
   attribute: PauseTimeWithGc_num_ops
   metric_type: gauge
